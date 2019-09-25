@@ -5,6 +5,7 @@ resource "azurerm_resource_group" "azlb" {
   tags     = "${var.tags}"
 }
 
+/*
 resource "azurerm_public_ip" "azlb" {
   count                        = "${var.type == "public" ? 1 : 0}"
   name                         = "${var.prefix}-publicIP"
@@ -13,6 +14,7 @@ resource "azurerm_public_ip" "azlb" {
   public_ip_address_allocation = "${var.public_ip_address_allocation}"
   tags                         = "${var.tags}"
 }
+*/
 
 resource "azurerm_lb" "azlb" {
   name                = "${var.prefix}-lb"
@@ -22,7 +24,7 @@ resource "azurerm_lb" "azlb" {
 
   frontend_ip_configuration {
     name                          = "${var.frontend_name}"
-    public_ip_address_id          = "${var.type == "public" ? join("",azurerm_public_ip.azlb.*.id) : ""}"
+   #public_ip_address_id          = "${var.type == "public" ? join("",azurerm_public_ip.azlb.*.id) : ""}"
     subnet_id                     = "${var.frontend_subnet_id}"
     private_ip_address            = "${var.frontend_private_ip_address}"
     private_ip_address_allocation = "${var.frontend_private_ip_address_allocation}"
