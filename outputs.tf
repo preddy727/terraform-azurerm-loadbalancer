@@ -15,7 +15,7 @@ output "azurerm_lb_id" {
 
 output "azurerm_lb_frontend_ip_configuration" {
   description = "the frontend_ip_configuration for the azurerm_lb resource"
-  value       = "${azurerm_lb.azlb.frontend_ip_configuration.*.id}"
+  value       = "${azurerm_lb.azlb.frontend_ip_configuration.0.id}"
 }
 
 output "azurerm_lb_probe_ids" {
