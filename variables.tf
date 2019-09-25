@@ -34,7 +34,7 @@ variable "lb_probe_interval" {
 
 variable "frontend_name" {
   description = "(Required) Specifies the name of the frontend ip configuration."
-  default     = "myPublicIP"
+  default     = "myPrivateIP"
 }
 
 /*
