@@ -37,11 +37,12 @@ variable "frontend_name" {
   default     = "myPublicIP"
 }
 
+/*
 variable "public_ip_address_allocation" {
   description = "(Required) Defines how an IP address is assigned. Options are Static or Dynamic."
   default     = "static"
 }
-
+*/
 variable "tags" {
   type = "map"
 
