@@ -21,6 +21,7 @@ resource "azurerm_lb" "azlb" {
   resource_group_name = "${azurerm_resource_group.azlb.name}"
   location            = "${var.location}"
   tags                = "${var.tags}"
+  sku                 = "Standard" 
 
   frontend_ip_configuration {
     name                          = "${var.frontend_name}"
