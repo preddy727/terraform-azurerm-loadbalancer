@@ -51,12 +51,6 @@ variable "tags" {
   }
 }
 
-variable "type" {
-  type        = "string"
-  description = "(Optional) Defined if the loadbalancer is private or public"
-  default     = "private"
-}
-
 variable "frontend_subnet_id" {
   description = "(Optional) Frontend subnet id to use when in private mode"
  }
