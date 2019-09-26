@@ -61,9 +61,11 @@ variable "frontend_subnet_id" {
   description = "(Optional) Frontend subnet id to use when in private mode"
  }
 
+/*
 variable "frontend_private_ip_address" {
   description = "(Optional) Private ip address to assign to frontend. Use it with type = private"
  }
+*/
 
 variable "frontend_private_ip_address_allocation" {
   description = "(Optional) Frontend ip allocation type (Static or Dynamic)"
